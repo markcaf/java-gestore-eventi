@@ -46,6 +46,13 @@ public class Evento {
 		return postiPrenotati;
 	}
 	
+	public void prenota() throws Exception {
+		if (data.isBefore(LocalDate.now()) || postiPrenotati == postiTotali) {
+			throw new Exception("L'evento è già passato o non ha posti disponibili");
+		}
+		postiPrenotati++;
+	}
+	
 	
 
 }
