@@ -60,6 +60,11 @@ public class Evento {
 		postiPrenotati--;
 	}
 	
+	private String getDataFormattata() {
+		return data.getDayOfMonth() + "/" + data.getMonthValue() + "/" + data.getYear();
+	}
+	
+	
 	
 
 }
