@@ -25,5 +25,11 @@ public class ProgrammEventi {
 		return eventi;
 	}
 	
+	public void addEvento(Evento e) {
+		eventi.add(e);
+	}
+	
+	
+	
 	
 }
