@@ -48,4 +48,22 @@ public class ProgrammEventi {
 		eventi.clear();
 	}
 	
+	public String getDataTitoloFormat() {
+		String dataTitoloFormat = getTitolo() + "\n";
+		sortEventi();
+		for (Evento e : eventi) {
+			dataTitoloFormat += e.getDataFormattata() + " - " + e.getTitolo() + "\n";
+		}
+		return dataTitoloFormat;
+	}
+	
+	private void sortEventi() {
+		eventi.sort((e1, e2) -> e1.getData().compareTo(e2.getData()));
+	}
+	
+	@Override
+	public String toString() {
+		return getDataTitoloFormat();
+	}
+	
 }
