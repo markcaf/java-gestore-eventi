@@ -40,5 +40,9 @@ public class ProgrammEventi {
 		return eventiByData;
 	}
 	
+	public int getCountEventi() {
+		return eventi.size();
+	}
+	
 	
 }
