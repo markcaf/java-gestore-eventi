@@ -21,9 +21,6 @@ public class Main {
 		
 		System.out.println("\n-------------------------------\n");
 		
-		//Evento eventoUtente = new Evento(titolo, data, postiTotali);
-		//System.out.println(eventoUtente);
-		
 		Evento eventoUtente = null;
 		try {
 			eventoUtente = new Evento(titolo, data, postiTotali);
@@ -85,9 +82,10 @@ public class Main {
 				}
 				
 			}
+			
 		}
 		
-		
+		sc.close();
 	}
 
 }
