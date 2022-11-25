@@ -48,9 +48,16 @@ public class Evento {
 	
 	public void prenota() throws Exception {
 		if (data.isBefore(LocalDate.now()) || postiPrenotati == postiTotali) {
-			throw new Exception("L'evento è già passato o non ha posti disponibili");
+			throw new Exception("La prenotazione per questo evento non è più disponibile");
 		}
 		postiPrenotati++;
+	}
+	
+	public void disdici() throws Exception{
+		if (data.isBefore(LocalDate.now()) || postiPrenotati == 0) {
+			throw new Exception("La disdetta per questo evento non è più disponibile");
+		}
+		postiPrenotati--;
 	}
 	
 	
