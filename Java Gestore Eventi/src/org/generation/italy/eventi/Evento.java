@@ -63,6 +63,11 @@ public class Evento {
 	private String getDataFormattata() {
 		return data.getDayOfMonth() + "/" + data.getMonthValue() + "/" + data.getYear();
 	}
+
+	@Override
+	public String toString() {
+		return getDataFormattata() + " - " + titolo;
+	}
 	
 	
 	
